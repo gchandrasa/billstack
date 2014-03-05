@@ -80,3 +80,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+##############################LOCAL SETTINGS###########################
+
+# local_settings.py can be used to override environment-specific settings
+# like database and email that differ between development and production.
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
